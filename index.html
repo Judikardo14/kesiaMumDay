@@ -510,7 +510,127 @@ body.on-light .nav-btn.prev{
 .fleur.eclose .feuille{transform:scale(1.08)}
 .coeur-fleur{transition:transform 1.2s ease 1s;transform-origin:100px 95px}
 .fleur.eclose .coeur-fleur{transform:scale(1.25)}
+
+/* ===== REFONTE PREMIUM — sobre, typographique, verre dépoli, lueurs de coucher de soleil ===== */
+:root{--sf:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',Roboto,sans-serif;
+  --degrade-soleil:linear-gradient(120deg,#FFB566 0%,#FF7A59 45%,#FF5C8A 100%);--encre:#1D1D1F}
+body{font-family:var(--sf);-webkit-font-smoothing:antialiased}
+.bg-dark{background:
+  radial-gradient(55% 45% at 18% 12%,rgba(255,92,138,.34),transparent 62%),
+  radial-gradient(70% 55% at 88% 92%,rgba(255,138,43,.40),transparent 62%),
+  radial-gradient(90% 80% at 50% 45%,#221A4C 0%,#0B0A1F 78%)}
+.bg-light{background:
+  radial-gradient(60% 50% at 85% 10%,rgba(255,186,120,.55),transparent 65%),
+  radial-gradient(60% 50% at 10% 95%,rgba(255,140,170,.40),transparent 65%),
+  linear-gradient(160deg,#FFF9F4,#FFEEE2)}
+.eyebrow{font-family:var(--sf);font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.chapter.light .eyebrow{color:rgba(29,29,31,.5)}
+.line{font-family:var(--sf);font-weight:700;font-style:normal;letter-spacing:-.035em;line-height:1.08;
+  font-size:clamp(30px,8.2vw,56px);color:#F5F5F7;text-shadow:none}
+.chapter.light .line{color:var(--encre)}
+.line.accent,.line.accent .word,.chapter.light .line.accent{font-family:var(--sf);font-weight:800;
+  background:var(--degrade-soleil);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.gate-title{font-family:var(--sf);font-style:normal;font-weight:800;letter-spacing:-.04em;line-height:1.05;font-size:clamp(30px,8.5vw,52px)}
+.btn-oui{font-family:var(--sf);font-weight:600;font-size:16px;letter-spacing:-.01em;color:#fff;border:0;border-radius:999px;
+  padding:15px 30px;background:var(--degrade-soleil);box-shadow:0 12px 34px rgba(255,92,138,.38),inset 0 1px 0 rgba(255,255,255,.4)}
+.btn-oui:hover{box-shadow:0 16px 42px rgba(255,92,138,.5),inset 0 1px 0 rgba(255,255,255,.5)}
+.photo-frame{border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.28);
+  box-shadow:0 40px 90px -20px rgba(0,0,0,.55),0 0 0 8px rgba(255,255,255,.06)}
+.photo-frame .corner{display:none}
+.photo-frame img{border-radius:0}
+.chapter-caption{font-family:var(--sf);font-weight:600;letter-spacing:-.02em;font-style:normal;line-height:1.3}
+.letter-card{background:rgba(255,255,255,.74);-webkit-backdrop-filter:blur(34px) saturate(1.7);backdrop-filter:blur(34px) saturate(1.7);
+  border:1px solid rgba(255,255,255,.7);border-radius:34px;box-shadow:0 50px 100px -30px rgba(40,10,60,.55),inset 0 1px 0 rgba(255,255,255,.9);color:var(--encre)}
+.letter-card::before{display:none}
+.letter-intro{font-family:var(--sf);font-style:normal;font-weight:500;font-size:15px;color:#6E6E73;letter-spacing:-.01em}
+.letter-hero{font-family:var(--sf);font-style:normal;font-weight:800;letter-spacing:-.04em;line-height:1.05;font-size:clamp(30px,8vw,44px);
+  background:var(--degrade-soleil);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.letter-rule{height:2px;border:0;border-radius:2px;background:var(--degrade-soleil);opacity:.7}
+.letter-body p{font-family:var(--sf);font-size:17px;line-height:1.6;color:var(--encre);letter-spacing:-.01em}
+.letter-highlight{font-weight:600;border:0;background:rgba(255,122,89,.12);border-radius:20px;padding:16px 20px;font-size:19px}
+.je-taime{font-weight:700;background:var(--degrade-soleil);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.letter-close{font-family:var(--sf);font-style:normal;font-weight:600;letter-spacing:-.02em;color:var(--encre)}
+.nav-btn{background:rgba(255,255,255,.12);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.24);border-radius:50%;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+body.on-light .nav-btn{background:rgba(255,255,255,.6);border-color:rgba(0,0,0,.08);color:var(--encre)}
+.page-dots .dot{width:6px;height:6px;border-radius:6px;transition:width .45s cubic-bezier(.3,1.2,.4,1),background .3s}
+.page-dots .dot.active{width:24px;background:var(--degrade-soleil)}
+.fleur{filter:drop-shadow(0 18px 40px rgba(255,92,138,.5))}
+
+/* ===== ÉDITORIAL — grand serif, ciel de coucher de soleil qui avance, photos en profondeur ===== */
+:root{--sf:'DM Sans',-apple-system,'SF Pro Text','Segoe UI',sans-serif;--serif:'Instrument Serif','Times New Roman',serif}
+.line{font-family:var(--serif);font-weight:400;font-size:clamp(44px,12.5vw,88px);letter-spacing:-.025em;line-height:.98}
+.line.accent,.line.accent .word,.chapter.light .line.accent{font-family:var(--serif);font-weight:400;font-style:italic}
+.gate-title{font-family:var(--serif);font-weight:400;font-style:normal;font-size:clamp(42px,12vw,82px);letter-spacing:-.025em;line-height:.98}
+.letter-hero{font-family:var(--serif);font-weight:400;font-size:clamp(42px,12vw,64px);letter-spacing:-.025em;line-height:.98}
+.letter-highlight{font-family:var(--serif);font-weight:400;font-style:italic;font-size:25px;line-height:1.2;letter-spacing:-.01em}
+.letter-close{font-family:var(--serif);font-weight:400;font-size:32px;letter-spacing:-.01em}
+.je-taime{font-family:var(--serif);font-weight:400;font-style:italic;font-size:1.3em;letter-spacing:-.01em}
+.chapter-caption{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(25px,6.8vw,36px);line-height:1.12;letter-spacing:-.01em}
+.eyebrow,.btn-oui{font-family:var(--sf)}
+
+.bg-dark{background:linear-gradient(180deg,#0A0920 0%,#1F1346 22%,#5A2268 42%,#B8386E 62%,#FF7A59 82%,#FFB35C 100%);
+  background-size:100% 320%;background-position:50% 0%;transition:background-position 2.8s cubic-bezier(.4,0,.2,1)}
+body[data-chapitre="1"] .bg-dark{background-position:50% 15%}
+body[data-chapitre="2"] .bg-dark{background-position:50% 32%}
+body[data-chapitre="3"] .bg-dark{background-position:50% 48%}
+body[data-chapitre="4"] .bg-dark{background-position:50% 64%}
+body[data-chapitre="5"] .bg-dark{background-position:50% 84%}
+body[data-chapitre="6"] .bg-dark{background-position:50% 100%}
+
+#ch-6{position:relative;overflow:hidden}
+.fond-flou{position:absolute;inset:-15%;background-size:cover;background-position:center;filter:blur(70px) saturate(1.7);
+  opacity:.65;transform:scale(1.2);z-index:0;pointer-events:none}
+.photo-frame,.chapter-caption{position:relative;z-index:1}
+.photo-frame::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.25),inset 0 -70px 90px -50px rgba(0,0,0,.4)}
+
+/* ===== AFFINAGE — tailles plus mesurées, Fraunces ===== */
+:root{--serif:'Fraunces',Georgia,'Times New Roman',serif}
+.line{font-weight:500;font-size:clamp(30px,8.6vw,54px);letter-spacing:-.02em;line-height:1.12;font-optical-sizing:auto}
+.line.accent,.line.accent .word,.chapter.light .line.accent{font-weight:500;font-style:italic}
+.gate-title{font-weight:500;font-size:clamp(32px,9vw,56px);letter-spacing:-.02em;line-height:1.1}
+.chapter-caption{font-weight:400;font-style:italic;font-size:clamp(21px,5.6vw,28px);line-height:1.25;letter-spacing:-.005em}
+.letter-hero{font-weight:500;font-size:clamp(32px,9vw,46px);letter-spacing:-.02em;line-height:1.08}
+.letter-intro{font-family:var(--serif);font-style:italic;font-weight:400;font-size:17px;color:#7A5A5A}
+.letter-body p{font-size:16.5px;line-height:1.65}
+.letter-highlight{font-weight:400;font-style:italic;font-size:21px;line-height:1.35;letter-spacing:-.005em;color:#4A1F3A}
+.je-taime{font-weight:500;font-size:1.22em}
+.letter-close{font-weight:500;font-size:26px}
+
+/* ===== ACCUEIL — l'enveloppe au sceau ===== */
+.gate{background:linear-gradient(180deg,#0A0920 0%,#2A1650 40%,#B8386E 78%,#FFB35C 100%)}
+.gate-glow{top:62%}
+.gate-eyebrow{position:relative;z-index:1;font-family:var(--sf);font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;
+  color:rgba(255,255,255,.7);margin:0 0 34px}
+.gate-indice{position:relative;z-index:1;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(22px,5.8vw,30px);
+  color:#FFE3C4;margin:44px 0 0;animation:gateHint 2.4s ease-in-out infinite}
+.enveloppe{--l:min(78vw,340px);position:relative;z-index:1;width:var(--l);height:calc(var(--l)*.68);perspective:1000px;
+  filter:drop-shadow(0 40px 50px rgba(10,5,30,.55));animation:flotteEnv 5s ease-in-out infinite}
+@keyframes flotteEnv{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-12px) rotate(1.2deg)}}
+.env-dos,.env-poche{position:absolute;inset:0;border-radius:14px}
+.env-dos{background:linear-gradient(160deg,#FFD9B0,#FFB566)}
+.env-poche{z-index:3;background:linear-gradient(170deg,#FFC98C,#FF9A52);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%)}
+.env-rabat{position:absolute;left:0;top:0;width:100%;height:56%;z-index:4;transform-origin:50% 0;border-radius:14px 14px 0 0;
+  background:linear-gradient(180deg,#FFB566,#FF8A2B);clip-path:polygon(0 0,100% 0,50% 100%);
+  transition:transform .9s cubic-bezier(.5,0,.2,1)}
+.env-lettre{position:absolute;left:7%;right:7%;top:6%;height:84%;z-index:2;background:#FFF9F4;border-radius:10px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  transition:transform 1.2s cubic-bezier(.3,1.1,.4,1) .6s}
+.env-lettre span{font-family:var(--sf);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#9A7A7A}
+.env-lettre b{font-family:var(--serif);font-style:italic;font-weight:500;font-size:44px;line-height:1.1;
+  background:var(--degrade-soleil);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.env-lettre i{font-style:normal;color:#FF5C8A;font-size:20px}
+.env-sceau{position:absolute;left:50%;top:54%;z-index:5;width:64px;height:64px;margin:-32px 0 0 -32px;
+  filter:drop-shadow(0 8px 14px rgba(120,10,50,.5));transition:transform .5s ease,opacity .4s ease;animation:pulseSceau 1.9s ease-in-out infinite}
+@keyframes pulseSceau{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+.gate.ouvre .env-sceau{animation:none;transform:scale(1.6) rotate(40deg);opacity:0}
+.gate.ouvre .env-rabat{transform:rotateX(180deg);z-index:0}
+.gate.ouvre .env-lettre{transform:translateY(-58%) scale(1.06);z-index:2}
+.gate.ouvre .gate-indice,.gate.ouvre .gate-eyebrow{opacity:0;transition:opacity .5s}
+@media (prefers-reduced-motion: reduce){.enveloppe,.env-sceau,.gate-indice{animation:none}}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -522,8 +642,8 @@ body.on-light .nav-btn.prev{
 
 <!-- MUSIQUE — dépose un fichier mp3 instrumental romantique (libre de droits) à côté de
      cette page, renomme-le "musique.mp4" (ou change le "src" ci-dessous). -->
-<audio id="bgMusic" preload="none">
-  <source src="musique.mp4" type="audio/mp4">
+<audio id="bgMusic" preload="auto">
+  <source src="musique.mpeg" type="audio/mpeg">
 </audio>
 <button class="nav-btn music" id="btnMusic" type="button" aria-label="Musique" aria-pressed="false">
   <svg class="icon-note" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.7"/></svg>
@@ -548,10 +668,21 @@ body.on-light .nav-btn.prev{
   <div class="dot"></div>
 </div>
 
-<div id="gate" class="gate" role="button" tabindex="0" aria-label="Toucher l'écran pour commencer">
+<div id="gate" class="gate" role="button" tabindex="0" aria-label="Toucher le sceau pour ouvrir l'enveloppe">
   <div class="gate-glow" aria-hidden="true"></div>
-  <div class="gate-rings" aria-hidden="true"><span></span><span></span><span></span></div>
-  <p class="gate-title">Maman, peux-tu toucher l'écran s'il te plaît&nbsp;?</p>
+  <p class="gate-eyebrow">Un cadeau pour toi</p>
+  <div class="enveloppe" aria-hidden="true">
+    <div class="env-dos"></div>
+    <div class="env-lettre"><span>Pour</span><b>Maman</b><i>❤</i></div>
+    <div class="env-poche"></div>
+    <div class="env-rabat"></div>
+    <div class="env-sceau"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><radialGradient id="degradeSceau" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#FF8FB1"/><stop offset="1" stop-color="#C21E5B"/></radialGradient></defs>
+        <circle cx="32" cy="32" r="30" fill="url(#degradeSceau)"/>
+        <circle cx="32" cy="32" r="26" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
+        <ellipse cx="32" cy="19" rx="7" ry="11" fill="#FFE3C4" opacity=".92" transform="rotate(0 32 32)"/><ellipse cx="32" cy="19" rx="7" ry="11" fill="#FFE3C4" opacity=".92" transform="rotate(72 32 32)"/><ellipse cx="32" cy="19" rx="7" ry="11" fill="#FFE3C4" opacity=".92" transform="rotate(144 32 32)"/><ellipse cx="32" cy="19" rx="7" ry="11" fill="#FFE3C4" opacity=".92" transform="rotate(216 32 32)"/><ellipse cx="32" cy="19" rx="7" ry="11" fill="#FFE3C4" opacity=".92" transform="rotate(288 32 32)"/><circle cx="32" cy="32" r="6" fill="#FF8A2B"/></svg></div>
+  </div>
+  <p class="gate-indice">Touche le sceau, Maman.</p>
 </div>
 
 <main class="track" id="track">
@@ -632,8 +763,11 @@ body.on-light .nav-btn.prev{
         <div class="letter-rule"></div>
 
         <div class="letter-body">
-          <p class="letter-highlight">Tu mérites tellement plus&nbsp;❤️</p>
-          <p>Merci d'avoir été notre force, notre abri et notre exemple. <span class="je-taime">Nous t'aimons, Maman.</span></p>
+          <p>Tu as été le père et la mère, le toit et le chemin. Tu as tout donné, souvent sans bruit, pour que tes filles ne manquent de rien.</p>
+          <p class="letter-highlight">Les obstacles sont venus, et tu n'as jamais baissé les bras. Chez toi, la force a toujours eu le visage de la douceur.</p>
+          <p>Aujourd'hui, pas de liste à faire, personne à servir&nbsp;: c'est ton jour. Nous voulons juste que tu saches ce que chacun de tes sourires a fait pousser en nous.</p>
+          <p class="letter-highlight">Tu mérites tellement plus&nbsp;: plus de repos, plus de joie, plus de tendresse&nbsp;❤️</p>
+          <p>Merci d'être notre racine, notre force et notre lumière. <span class="je-taime">Nous t'aimons, Maman.</span></p>
         </div>
 
         <p class="letter-close">Bisous&nbsp;💋</p>
@@ -818,6 +952,7 @@ const AUTO_DELAY = { 'ch-1': 6500, 'ch-3': 9500, 'ch-4': 9500, 'ch-5': 5500, 'ch
 let autoTimer = null;
 
 function refreshUI(){
+  document.body.dataset.chapitre = current;
   dots.forEach((d,i)=> d.classList.toggle('active', i===current));
   btnPrev.classList.toggle('hidden', current === 0);
   const hideNext = current === chapters.length-1 || chapters[current].dataset.hideNext === 'true';
@@ -986,8 +1121,8 @@ const iconMute = btnMusic ? btnMusic.querySelector('.icon-mute') : null;
 let musicWanted = true;
 let musicStarted = false;
 
-const AUDIO_START = 1;   // dès le début
-const AUDIO_END = 220;   // valeur cible — ajustée automatiquement à la vraie durée du fichier
+const AUDIO_START = 8;   // dès le début
+const AUDIO_END = 233;   // valeur cible — ajustée automatiquement à la vraie durée du fichier
 let EFFECTIVE_END = AUDIO_END;
 const TARGET_VOLUME = 0.55;
 const FADE_IN_MS = 0;   // quasi instantané : le son doit démarrer pile au toucher
@@ -995,10 +1130,11 @@ const CROSSFADE_MS = 900; // court : assez pour être doux, assez court pour res
 
 function fadeVolume(el, to, duration){
   if(!el) return;
+  if(!(duration > 0)){ el.volume = Math.max(0, Math.min(1, to)); return; }
   const from = el.volume;
   const startTime = performance.now();
   function step(now){
-    const t = Math.min(1, (now - startTime) / duration);
+    const t = Math.max(0, Math.min(1, (now - startTime) / duration));
     el.volume = from + (to - from) * t;
     if(t < 1) requestAnimationFrame(step);
   }
@@ -1096,7 +1232,7 @@ function tryStartMusic(){
       musicStarted = true;
       setMusicIcon(true);
       fadeVolume(bgMusic, TARGET_VOLUME, FADE_IN_MS);
-    }).catch(()=>{ /* bloqué par le navigateur : réessayé au prochain geste */ });
+    }).catch((erreur)=>{ console.warn('Musique non lancée :', erreur && erreur.name, erreur && erreur.message); });
   } else {
     musicStarted = true; setMusicIcon(true);
     fadeVolume(bgMusic, TARGET_VOLUME, FADE_IN_MS);
@@ -1144,10 +1280,16 @@ function enterExperience(){
   onEnterChapter(chapters[0]);
   scheduleAuto();
 }
+function ouvrirEnveloppe(){
+  if(!gate || gate.classList.contains('ouvre')) return;
+  gate.classList.add('ouvre');
+  tryStartMusic();
+  setTimeout(enterExperience, 1900);
+}
 if(gate){
-  gate.addEventListener('click', enterExperience);
+  gate.addEventListener('click', ouvrirEnveloppe);
   gate.addEventListener('keydown', (e)=>{
-    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); enterExperience(); }
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); ouvrirEnveloppe(); }
   });
 } else {
   onEnterChapter(chapters[0]);
@@ -1160,10 +1302,15 @@ if(gate){
 <script>
 (function(){
   let indexPhoto = 0;
+  const fondFlou = document.createElement('div');
+  fondFlou.className = 'fond-flou';
+  document.getElementById('ch-6').prepend(fondFlou);
   function afficherPhoto(){
     const photos = Array.from(document.querySelectorAll('.photo-frame img'));
     if(!photos.length) return;
-    photos.forEach((photo, rang) => photo.classList.toggle('visible', rang === indexPhoto % photos.length));
+    const rangActif = indexPhoto % photos.length;
+    photos.forEach((photo, rang) => photo.classList.toggle('visible', rang === rangActif));
+    fondFlou.style.backgroundImage = 'url("' + photos[rangActif].getAttribute('src') + '")';
     indexPhoto++;
   }
   afficherPhoto();
